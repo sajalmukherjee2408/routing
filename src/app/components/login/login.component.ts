@@ -26,11 +26,15 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.auth.login(this.loginForm.value).subscribe(
         (result) => {
-          console.log(result);
+          localStorage.setItem('token', result.data.tokens.access_token);
+
+          // Put the object into storage
+          localStorage.setItem('user_data', JSON.stringify(result.data));
+
           this.router.navigate(['/admin']);
         },
         (err: Error) => {
-          alert(err.message);
+          console.log(err.message);
         }
       );
     }

@@ -1,0 +1,53 @@
+
+
+<div class="container mt-3">
+  <div class="jumbotron">
+    <div class="card">
+      <div class="card-header">Registration From</div>
+      <div class="card-body">
+        <form [formGroup]="userForm" (ngSubmit)="addOrUpdateUser()" novalidate>
+
+          <div class="form-group">
+            <label for="full_name">Name:</label>
+            <input type="text" class="form-control" id="full_name" name="full_name">
+          </div>
+
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username">
+          </div>
+          <div class="form-group">
+            <label for="email">email:</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+
+          <div class="form-group">
+            <label for="date_of_birth">DOB:</label>
+            <input type="date" class="form-control" id="date_of_birth" name="date_of_birth">
+          </div>
+
+          <div class="form-group">
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" class="form-control" id="phone_number" name="phone_number">
+          </div>
+
+          <div class="form-group">
+            <label for="password">password:</label>
+            <input type="password" class="form-control" id="password" name="password">
+          </div>
+
+          <div class="form-group">
+            <label for="password_confirmation">Confirma Password:</label>
+            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+          </div>
+
+        </form>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button></div>
+    </div>
+  </div>
+
+
+</div>
+
